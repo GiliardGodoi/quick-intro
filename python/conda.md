@@ -83,3 +83,7 @@ conda env export > environment.yml
 ```cmd
 conda remove --name myenv --all
 ```
+
+# Referências
+
+[Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) **How to manage a enviroment**
