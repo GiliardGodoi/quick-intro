@@ -4,13 +4,13 @@
 
 ### Navegar entre os diretórios
 ```
-cd folder
+cd ./folder
 cd ..
 ```
 
 ### Listar diretório
 ```
-ls
+ls [./folder]
 dir
 ```
 
@@ -45,7 +45,8 @@ shutdown -s -c "Vai Dormir!"
 shutdown -a
 ```
 
-Opções
+Opções:
+
     -s shutdown
     -r restart
     -a abort
