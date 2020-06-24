@@ -32,7 +32,7 @@ conda install --name myenv --file spec-file.txt
 ```cmd
 > conda install pandas
 >
-> conda install pandas, numpy
+> conda install pandas numpy
 ```
 
 ### Listando os ambientes disponíveis
