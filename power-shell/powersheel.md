@@ -52,3 +52,11 @@ Opções:
     -a abort
     -t time in seconds
     -c message
+    
+## Start-Process
+
+```
+Start-Process -FilePath "python" -ArgumentList "main.py" -Verb RunAs
+```
+
+See documantation about [Start-Process](https://docs.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/start-process?view=powershell-6)
