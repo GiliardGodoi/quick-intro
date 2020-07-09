@@ -92,3 +92,74 @@ Se retornado um único objeto, podemos fazer algo como:
 ```
 
 Podemos saver mais nesse [link aqui](https://gallery.technet.microsoft.com/scriptcenter/Set-the-process-priority-9826a55f).
+
+## Obtendo um processo e suas propriedades
+
+### Obter todos os processos
+
+```
+>> Get-Process
+```
+
+Informações que são mostradas:
+
+**Handles**: The number of process handles that the process opened. A handle is an integer that Windows assigns to processes. For instance, each process thread is typically assigned a handle.
+
+**NPM(K)**: Non-paged memory the process is using, in kilobytes.
+
+**PM(K)**: Pageable memory the process is using, in kilobytes.
+
+**WS(K)**: Process working set, in kilobytes. The value refers to the number of memory pages that the process recently accessed.
+
+**VM(M)**: Virtual memory the process is using.
+
+**CPU(s)**: Processor time used on all processors, in seconds (!).
+
+**Id**: Process ID.
+
+**ProcessName**: Self-explanatory.
+
+Retirado de [Timothy Warner 4sysops](https://4sysops.com/archives/powershell-get-process-managing-processes/)
+
+
+### Obter um processo pelo ID ou pelo nome:
+
+```
+>> Get-Process python
+```
+
+ou
+
+```
+>> Get-Process 1356
+```
+
+Se o processo não existir (o nome ou pelo id) um erro é gerado.
+
+### Listar as propriedades do processo
+
+```
+>> Get-Process 'python' | Format-List *
+```
+
+### Obter uma propriedade específica
+
+```
+>> Get-Process python -FileVersionInfo
+```
+
+### Obtendo informaçes detalhadas
+
+```
+>> Get-Process | Get-Member -MemberType Properties
+```
+
+```
+>> Get-Process | Get-Member -Name CPU | Format-List *
+```
+
+* Informações muito úteis foram retiradas do [artigo](https://4sysops.com/archives/powershell-get-process-managing-processes/) de Timothy Warner para o site 4sysops.
+
+* Explicações sobre as propriedades definidas para um processo encontradas na documentação oficial. [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.process?redirectedfrom=MSDN&view=netcore-3.1#properties)
+
+[link-0](https://blog.itpro.tv/get-process-powershell-command/)
