@@ -10,7 +10,7 @@ Use `scp` command
 
     scp -r local/directory user@server2:home/directory
 
-     scp -P 9048 ./README.md giliardalmeida@200.134.18.71:projects/README.md
+     scp -P 9090 ./teste.txt user@server2:directory/teste.txt
 
 
 ---
