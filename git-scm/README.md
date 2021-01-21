@@ -361,6 +361,30 @@ A mensagem indicando um *merge* manual será:
 
     git push <nome do origin> <nome do branch> --delete
 
+#### Renomeando um branch
+
+Existem duas formas de renomear um branch: renomear de dentro, entrar no branch (dar um checkout) e renomear; de fora, renomear um branch de outro branch, como o master.
+
+Renomear de dentro:
+
+    git checkout old-branch-name
+    git branch -m new-branch-name
+
+Renomear de fora (supondo que o branch atual seja o *master*, por exemplo)
+
+    git branch -m old-name new-name
+    
+#### Renomear um branch remoto
+
+Não é possível renomear um branch remoto diretamente. 
+O que se faz é renomear o branch localmente e substituir no repositório remoto.
+A maneira mais rápida é:
+
+    git checkout old-name
+    git branch -m new-name
+    git push origin :old-name
+    git push --set-upstream origin new-name
+
 ### Rebasing
 
 Fazendo o **rebase** entre um o branch bug-123 e o master.
