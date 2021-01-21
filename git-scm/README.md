@@ -3,6 +3,16 @@
 Este documento é um fork de [leocomelli's](https://gist.github.com/leocomelli/2545add34e4fec21ec16) gist.
 Algumas modificações podem ter sido introduzidas por mim ao longo do tempo.
 
+1. [Configuração](#configuração)
+2. [Repositório Local](#repositório-local)
+3. [Repositório Remoto](#repositório-remoto)
+4. [Tags](#tags)
+5. [Branches](#branches)
+6. [Rebase](#rebasing)
+7. [Stash](#stash)
+8. [Reescrevendo o histórico](#reescrevendo-o-histórico)
+9. [Bisect](#bisect)
+
 ## Estados
 
 * Modificado (modified) ou área de trabalho (working directory)
